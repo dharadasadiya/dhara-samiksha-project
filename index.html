@@ -1,1 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>VoltRoute | Smart EV Charging System</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                ⚡ VoltRoute
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#find">Find Charger</a></li>
+                <li><a href="#stations">Stations</a></li>
+                <li><a href="#fast">Fast Charging</a></li>
+                <li><a href="#device">Device Charging</a></li>
+                <li><a href="#qr">QR & Payment</a></li>
+                <li><a href="#emergency">Emergency</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">SMART EV CHARGING NETWORK</p>
+
+            <h1>
+                Charge Smarter.<br>
+                Drive Further. ⚡
+            </h1>
+
+            <p>
+                Find EV charging stations, check charger availability,
+                charging speed, port types, location and payment options
+                all in one smart platform.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#find" class="btn primary-btn">
+                    Find a Charger ⚡
+                </a>
+
+                <a href="#stations" class="btn secondary-btn">
+                    Explore Stations →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <!-- Add your EV car image inside images folder -->
+            <img src="images/ev-car.jpg"
+                 alt="Electric Car Charging">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FIND CHARGER ================= -->
+
+    <section id="find" class="find-section">
+
+        <h2>Find Your Charging Station 🔍</h2>
+
+        <p>
+            Search charging stations by city or area.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter City or Area">
+
+            <button onclick="searchStation()">
+                Search 🔍
+            </button>
+
+        </div>
+
+        <p id="searchResult"></p>
+
+    </section>
+
+
+    <!-- ================= STATIONS ================= -->
+
+    <section id="stations" class="stations">
+
+        <h2>Popular Charging Stations ⚡</h2>
+
+        <div class="station-container">
+
+
+            <!-- STATION 1 -->
+
+            <div class="station-card">
+
+                <img src="images/charger.jpg"
+                     alt="EV Charger">
+
+                <h3>Ahmedabad EV Hub</h3>
+
+                <p>📍 SG Highway, Ahmedabad</p>
+
+                <div class="station-info">
+
+                    <span>⚡ 60 kW</span>
+                    <span>🔌 CCS2</span>
+
+                </div>
+
+                <p class="available">
+                    🟢 4 Ports Available
+                </p>
+
+                <button onclick="viewStation('Ahmedabad EV Hub')">
+                    View Details
+                </button>
+
+                <a
+                    class="direction-btn"
+                    href="https://www.google.com/maps/search/SG+Highway+Ahmedabad"
+                    target="_blank">
+
+                    Get Directions 📍
+
+                </a>
+
+            </div>
+
+
+            <!-- STATION 2 -->
+
+            <div class="station-card">
+
+                <img src="images/station.jpg"
+                     alt="EV Charging Station">
+
+                <h3>City Power Charge</h3>
+
+                <p>📍 Prahlad Nagar, Ahmedabad</p>
+
+                <div class="station-info">
+
+                    <span>⚡ 22 kW</span>
+                    <span>🔌 Type 2</span>
+
+                </div>
+
+                <p class="available">
+                    🟢 3 Ports Available
+                </p>
+
+                <button onclick="viewStation('City Power Charge')">
+                    View Details
+                </button>
+
+                <a
+                    class="direction-btn"
+                    href="https://www.google.com/maps/search/Prahlad+Nagar+Ahmedabad"
+                    target="_blank">
+
+                    Get Directions 📍
+
+                </a>
+
+            </div>
+
+
+            <!-- STATION 3 -->
+
+            <div class="station-card">
+
+                <img src="images/fast-charger.jpg"
+                     alt="Fast EV Charger">
+
+                <h3>VoltFast Station</h3>
+
+                <p>📍 Satellite Road, Ahmedabad</p>
+
+                <div class="station-info">
+
+                    <span>⚡ 120 kW</span>
+                    <span>🔌 CCS2</span>
+
+                </div>
+
+                <p class="available">
+                    🟢 6 Ports Available
+                </p>
+
+                <button onclick="viewStation('VoltFast Station')">
+                    View Details
+                </button>
+
+                <a
+                    class="direction-btn"
+                    href="https://www.google.com/maps/search/Satellite+Road+Ahmedabad"
+                    target="_blank">
+
+                    Get Directions 📍
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAST CHARGING ================= -->
+
+    <section id="fast" class="fast-section">
+
+        <div>
+
+            <h2>⚡ Fast Charging</h2>
+
+            <p>
+                Find high-power EV chargers and spend less
+                time waiting and more time driving.
+            </p>
+
+        </div>
+
+
+        <div class="fast-box">
+
+            <div>
+                <h3>30 Min</h3>
+                <p>Average Fast Charge</p>
+            </div>
+
+            <div>
+                <h3>60 kW+</h3>
+                <p>High Power Charging</p>
+            </div>
+
+            <div>
+                <h3>120 kW</h3>
+                <p>Ultra Fast Charger</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DEVICE CHARGING ================= -->
+
+    <section id="device" class="device-section">
+
+        <h2>Charge More Than Your Car 🔋</h2>
+
+        <p>
+            While your EV is charging, recharge your
+            personal devices at our smart charging zone.
+        </p>
+
+
+        <div class="device-container">
+
+            <div class="device-card">
+                📱
+                <h3>Phone Charging</h3>
+                <p>USB & USB-C Charging</p>
+            </div>
+
+
+            <div class="device-card">
+                🎧
+                <h3>Headphones</h3>
+                <p>Charge Earbuds & Headphones</p>
+            </div>
+
+
+            <div class="device-card">
+                💻
+                <h3>Laptop Charging</h3>
+                <p>Power Outlet Available</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QR & PAYMENT ================= -->
+
+    <section id="qr" class="qr-section">
+
+        <div class="qr-info">
+
+            <h2>Scan. Charge. Pay. 📱</h2>
+
+            <p>
+                Scan the station QR code to view charger details,
+                start your charging session and complete payment.
+            </p>
+
+            <button onclick="showQR()">
+                Show QR Information
+            </button>
+
+        </div>
+
+
+        <div class="qr-box">
+
+            <img src="images/qr-code.png"
+                 alt="QR Code">
+
+            <p>Station ID: EV-AHD-001</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PAYMENT ================= -->
+
+    <section class="payment-section">
+
+        <h2>Charging Payment 💳</h2>
+
+        <div class="payment-card">
+
+            <p><strong>Station:</strong> Ahmedabad EV Hub</p>
+
+            <p><strong>Charger:</strong> 60 kW Fast Charger</p>
+
+            <p><strong>Charging Used:</strong> 25 kWh</p>
+
+            <p><strong>Price:</strong> ₹12 / kWh</p>
+
+            <h3>Total Amount: ₹300</h3>
+
+            <button onclick="paymentDemo()">
+                Pay Now 💳
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EMERGENCY ================= -->
+
+    <section id="emergency" class="emergency-section">
+
+        <h2>🚨 Emergency Safety System</h2>
+
+        <p>
+            In case of fire, electrical fault or any emergency,
+            immediately follow the safety instructions and contact support.
+        </p>
+
+
+        <div class="emergency-container">
+
+            <div class="emergency-card">
+
+                <h3>🔥 Fire Emergency</h3>
+
+                <p>
+                    Move to a safe location and contact emergency services.
+                </p>
+
+                <button onclick="fireEmergency()">
+                    Fire Emergency
+                </button>
+
+            </div>
+
+
+            <div class="emergency-card">
+
+                <h3>⚡ Electrical Fault</h3>
+
+                <p>
+                    Stop using the charger and contact the control room.
+                </p>
+
+                <button onclick="electricalEmergency()">
+                    Report Electrical Fault
+                </button>
+
+            </div>
+
+
+            <div class="emergency-card">
+
+                <h3>📞 Control Room</h3>
+
+                <p>
+                    Station Support: Demo Contact
+                </p>
+
+                <button onclick="contactControl()">
+                    Contact Control Room
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SAFETY ================= -->
+
+    <section class="safety-section">
+
+        <h2>Safety Instructions 🛡️</h2>
+
+        <ul>
+
+            <li>Do not touch damaged charging cables.</li>
+
+            <li>Keep water away from electrical equipment.</li>
+
+            <li>Follow charging station instructions.</li>
+
+            <li>In an emergency, move to a safe area.</li>
+
+            <li>Contact station support when required.</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section">
+
+        <h2>About VoltRoute ⚡</h2>
+
+        <p>
+            VoltRoute is a Smart EV Charging, Payment and Safety System
+            designed to help electric vehicle users easily find charging
+            stations, check charger information, locate fast charging
+            points and access safety support.
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <h2>Contact & Support 📞</h2>
+
+        <form onsubmit="contactMessage(event)">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required>
+
+            <textarea
+                placeholder="Write your message"
+                required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>⚡ VoltRoute</h3>
+
+        <p>
+            Smart EV Charging, Payment & Safety System
+        </p>
+
+        <p>
+            © 2026 VoltRoute | All Rights Reserved
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Presented By</strong>
+        </p>
+
+        <h4>
+            Dhara Dasadiya & Samikha Kadiya
+        </h4>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
